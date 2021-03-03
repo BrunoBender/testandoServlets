@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    
+    <context-param>
+        <description></description>
+        <param-name>bdUrl</param-name>
+        <param-value>jdbc:urlConexaoBancoDeDados</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>SimularLogin</servlet-name>
+        <servlet-class>br.uem.servlet.ServletSimularLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SimularLogin</servlet-name>
+        <url-pattern>/simularLogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>VerificarLogin</servlet-name>
+        <servlet-class>br.uem.servlet.ServletVerificarLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerificarLogin</servlet-name>
+        <url-pattern>/verificarLogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CompartilharObjeto</servlet-name>
+        <servlet-class>br.uem.servlet.ServletCompartilhandoObjeto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompartilharObjeto</servlet-name>
+        <url-pattern>/compartilharObjeto</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RecuperarObjeto</servlet-name>
+        <servlet-class>br.uem.servlet.ServletRecuperandoObjeto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecuperarObjeto</servlet-name>
+        <url-pattern>/recuperarObjeto</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ConexaoBD</servlet-name>
+        <servlet-class>br.uem.servlet.ServletConexaoBD</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConexaoBD</servlet-name>
+        <url-pattern>/conexaoBD</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>OlaMundo</servlet-name>
+        <servlet-class>br.uem.servlet.ServletOlaMundo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OlaMundo</servlet-name>
+        <url-pattern>/olaMundo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>EnviaEmail</servlet-name>
+        <servlet-class>br.uem.servlet.ServletEnviaEmail</servlet-class>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>brunopaulobender@gmail.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EnviaEmail</servlet-name>
+        <url-pattern>/enviaEmail</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
